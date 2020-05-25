@@ -11,7 +11,7 @@
   $(window).on('load', function () {
     if (window.location.href.match('index.html') != null) {
       $.ajax({
-        url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/pageVisit/test",
+        url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/pageVisit",
         type: "POST",
         success: function(result) {
           console.log("Page visit!");
@@ -26,7 +26,7 @@
   $(window).on('load', function () {
     if (window.location.href.match('thanks-screen.html') != null) {
       $.ajax({
-        url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/knowMore/test",
+        url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/knowMore",
         type: "POST",
         success: function(result) {
           console.log("Know more!");
