@@ -49,7 +49,7 @@
     <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png" />
   </head>
-  <body data-spy="scroll" data-target=".fixed-top">
+  <body data-spy="scroll" data-target=".fixed-top" onload="onIndexLoad()">
     <!-- Preloader -->
     <div class="spinner-wrapper">
       <div class="spinner">
@@ -74,7 +74,12 @@
                   tener el saldo suficiente al momento de subirte al ómnibus.
                   Ahora con un par de clicks solucioná eso al instante.
                 </p>
-                <a id="know-more" class="btn-solid-lg page-scroll" href="thanks-screen.html">QUIERO SABER MÁS</a>
+                <a
+                  onclick="onKnowMorePressed()"
+                  class="btn-solid-lg page-scroll"
+                  href="thanks-screen.html"
+                  >QUIERO SABER MÁS</a
+                >
               </div>
               <!-- end of text-container -->
             </div>
@@ -351,7 +356,7 @@
           <!-- end of col -->
           <div class="col-md-4">
             <div class="footer-col last">
-              <h4> </h4>
+              <h4></h4>
               <ul class="list-unstyled li-space-lg p-small">
                 <li class="media">
                   <i class="fas fa-square"></i>

@@ -4,39 +4,34 @@
    Description: Custom JS file
 */
 
+function onIndexLoad() {
+  $.ajax({
+    url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/pageVisit",
+    type: "POST",
+    success: function (result) {
+      console.log("Page visit!");
+    },
+    error: function (error) {
+      console.log("Page visit error :(");
+    }
+  });
+}
+
+function onKnowMorePressed() {
+  $.ajax({
+    url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/knowMore",
+    type: "POST",
+    success: function (result) {
+      console.log("Know more!");
+    },
+    error: function (error) {
+      console.log("Know more error :(");
+    }
+  });
+}
 
 (function ($) {
   "use strict";
-
-  $(window).on('load', function () {
-    if (window.location.href.match('index.html') != null) {
-      $.ajax({
-        url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/pageVisit",
-        type: "POST",
-        success: function(result) {
-          console.log("Page visit!");
-        },
-        error: function(error) {
-          console.log("Page visit error :(");
-        }
-      });
-    }
-  });
-
-  $(window).on('load', function () {
-    if (window.location.href.match('thanks-screen.html') != null) {
-      $.ajax({
-        url: "https://nxqit5y348.execute-api.us-east-1.amazonaws.com/dev/knowMore",
-        type: "POST",
-        success: function(result) {
-          console.log("Know more!");
-        },
-        error: function(error) {
-          console.log("Know more error :(");
-        }
-      });
-    }
-  });
 
   /* Preloader */
   $(window).on('load', function () {
